@@ -1,8 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
 .Layout {
   min-height: 100vh;
 }
 
-.NavBar li {
+.NavBar {
+  display: flex;
+}
+
+.NavBar a {
   padding: 1rem;
   cursor: pointer;
+}
+
+.activeNavLink {
+  background: #334155;
 }
