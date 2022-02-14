@@ -14,17 +14,21 @@ const connector = connect(null, mapDispatchToProps);
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
 function Layout(props: PropsFromRedux) {
+  const { fetchTodos } = props;
+
   useEffect(() => {
     console.log("Layout useEffect()");
 
-    props.fetchTodos();
-  }, []);
+    fetchTodos();
+  }, [fetchTodos]);
 
   return (
     <div className="Layout dark:bg-zinc-900">
       <AppBar />
 
-      <Outlet />
+      <div className="container">
+        <Outlet />
+      </div>
     </div>
   );
 }
