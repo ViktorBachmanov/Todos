@@ -18,3 +18,12 @@
 .activeNavLink {
   background: #334155;
 }
+
+.Card {
+  min-height: 5rem;
+  border-radius: 5px;
+  break-inside: avoid;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  background: #334155;
+}

@@ -6,5 +6,5 @@ type Props = {
 };
 
 export default function Card(props: Props) {
-  return <div>{props.todo.title}</div>;
+  return <div className="Card">{props.todo.title}</div>;
 }
