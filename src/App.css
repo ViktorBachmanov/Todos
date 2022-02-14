@@ -27,3 +27,12 @@
   padding: 1rem;
   background: #334155;
 }
+
+.Chip {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: inline-block;
+  background: #616974;
+}
