@@ -1,6 +1,7 @@
 import React from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "../../app/store";
+import Card from "./Card";
 
 function mapStateToProps(state: RootState) {
   return {
@@ -21,9 +22,20 @@ function Todos(props: PropsFromRedux) {
   return (
     <div className="dark:text-slate-300">
       <h2>Todos</h2>
-      {props.todos.map((todo) => {
-        return <div key={todo.id}>{todo.title}</div>;
-      })}
+      <div
+        className="
+          columns-1 
+          sm:columns-2 
+          md:columns-3 
+          lg:columns-4 
+          xl:columns-5
+          2xl:columns-6
+        "
+      >
+        {props.todos.map((todo) => {
+          return <Card key={todo.id} todo={todo} />;
+        })}
+      </div>
     </div>
   );
 }

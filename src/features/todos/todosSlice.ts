@@ -1,12 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState, AppThunk } from "../../app/store";
-
-type Todo = {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-};
+import { Todo } from "./types";
 
 export interface TodosState {
   list: Array<Todo>;
