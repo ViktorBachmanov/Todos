@@ -47,6 +47,19 @@ code {
   .Pagination select {
     @apply dark:bg-slate-800 dark:text-slate-300;
   }
+
+  .ChangePage {
+    width: 1em;
+    display: inline-block;
+    margin: 0 0.5em;
+    cursor: pointer;
+  }
+
+  .ChangePage.disabled {
+    cursor: auto;
+    pointer-events: none;
+    @apply text-gray-600;
+  }
 }
 
 .Layout {
@@ -60,4 +73,9 @@ code {
 .NavBar a {
   padding: 1rem;
   cursor: pointer;
+}
+
+.Pagination {
+  display: flex;
+  align-items: center;
 }

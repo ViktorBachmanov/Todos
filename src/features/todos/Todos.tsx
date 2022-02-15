@@ -23,6 +23,7 @@ function Todos(props: PropsFromRedux) {
   return (
     <div className="dark:text-slate-300">
       <h2>Todos</h2>
+      <Pagination />
       <div
         className="
           columns-1 
@@ -33,7 +34,6 @@ function Todos(props: PropsFromRedux) {
           2xl:columns-6
         "
       >
-        <Pagination />
         {props.todos.map((todo) => {
           return <Card key={todo.id} todo={todo} />;
         })}
