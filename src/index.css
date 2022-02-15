@@ -35,6 +35,11 @@ code {
     @apply bg-emerald-700;
   }
 
+  .Card textarea {
+    width: 100%;
+    @apply dark:bg-slate-800 dark:text-slate-300;
+  }
+
   .Chip {
     font-size: 0.875rem;
     line-height: 1.25rem;
