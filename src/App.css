@@ -1,38 +1,3 @@
 * {
   box-sizing: border-box;
 }
-
-.Layout {
-  min-height: 100vh;
-}
-
-.NavBar {
-  display: flex;
-}
-
-.NavBar a {
-  padding: 1rem;
-  cursor: pointer;
-}
-
-.activeNavLink {
-  background: #334155;
-}
-
-.Card {
-  min-height: 5rem;
-  border-radius: 5px;
-  break-inside: avoid;
-  margin: 0 0 1rem 0;
-  padding: 1rem;
-  background: #334155;
-}
-
-.Chip {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  display: inline-block;
-  background: #616974;
-}

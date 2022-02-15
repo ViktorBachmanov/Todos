@@ -9,8 +9,13 @@ type Props = {
 export default function Card(props: Props) {
   const { title, completed } = props.todo;
 
+  let classes = "Card";
+  if (completed) {
+    classes += " completed";
+  }
+
   return (
-    <div className="Card">
+    <div className={classes}>
       <div>{title}</div>
       {completed && <Chip />}
     </div>
