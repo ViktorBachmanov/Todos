@@ -7,6 +7,7 @@ import { setTodosPerPage as setTodosPerPageAction } from "./todosSlice";
 function mapStateToProps(state: RootState) {
   return {
     todosPerPage: state.todos.perPage,
+    currentPage: state.todos.currentPage,
   };
 }
 
@@ -19,14 +20,18 @@ const connector = connect(mapStateToProps, mapDispatchToProps);
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
 function Pagination(props: PropsFromRedux) {
+  const { todosPerPage, currentPage } = props;
+
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     props.setTodosPerPage(parseInt(e.target.value));
   };
 
+  const currentTodoNo = currentPage * todosPerPage;
+
   return (
     <div className="Pagination">
-      <span>Todos per page</span>
-      <select value={props.todosPerPage} onChange={handleChange}>
+      <span>Todos per page: </span>
+      <select value={todosPerPage} onChange={handleChange}>
         {perPageRange.map((val) => {
           return (
             <option key={val} value={val}>
@@ -35,6 +40,8 @@ function Pagination(props: PropsFromRedux) {
           );
         })}
       </select>
+
+      <span>{`${currentTodoNo + 1}-${currentTodoNo + todosPerPage}`}</span>
     </div>
   );
 }
