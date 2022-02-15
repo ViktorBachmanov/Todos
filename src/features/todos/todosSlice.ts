@@ -1,15 +1,21 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState, AppThunk } from "../../app/store";
-import { Todo } from "./types";
+import { Todo, perPageRange } from "./types";
 
 export interface TodosState {
   list: Array<Todo>;
   status: "idle" | "loading" | "failed";
+  perPage: number;
+  currentPage: number;
+  pageList: Array<Todo>;
 }
 
 const initialState: TodosState = {
   list: [],
   status: "idle",
+  perPage: perPageRange[0],
+  currentPage: 0,
+  pageList: [],
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -43,6 +49,11 @@ export const todosSlice = createSlice({
       .addCase(fetchTodos.fulfilled, (state, action) => {
         state.status = "idle";
         state.list = action.payload;
+        state.pageList = getPageTodos(
+          state.list,
+          state.perPage,
+          state.currentPage
+        );
       });
   },
 });
@@ -55,3 +66,14 @@ export const { incrementByAmount } = todosSlice.actions;
 //export const selectCount = (state: RootState) => state.counter.value;
 
 export default todosSlice.reducer;
+
+// helper functions
+
+function getPageTodos(
+  todosList: Todo[],
+  todosPerPage: number,
+  currentPage: number
+): Todo[] {
+  const currentTodo = currentPage * todosPerPage;
+  return todosList.slice(currentTodo, currentTodo + todosPerPage);
+}

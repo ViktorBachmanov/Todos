@@ -4,3 +4,5 @@ export type Todo = {
   title: string;
   completed: boolean;
 };
+
+export const perPageRange = [8, 10, 12, 16, 20];

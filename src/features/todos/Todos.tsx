@@ -5,7 +5,7 @@ import Card from "./Card";
 
 function mapStateToProps(state: RootState) {
   return {
-    todos: state.todos.list,
+    todos: state.todos.pageList,
     status: state.todos.status,
   };
 }
