@@ -6,10 +6,15 @@ import {
   setTodosPerPage as setTodosPerPageAction,
   incrementPage as incrementPageAction,
   decrementPage as decrementPageAction,
+  jumpToFirstPage as jumpToFirstPageAction,
+  jumpToLastPage as jumpToLastPageAction,
 } from "./todosSlice";
 import ChangePage from "./ChangePage";
-import { ReactComponent as ChevronRight } from "./svg/chevron-right.svg";
+
 import { ReactComponent as ChevronLeft } from "./svg/chevron-left.svg";
+import { ReactComponent as ChevronDoubleLeft } from "./svg/chevron-double-left.svg";
+import { ReactComponent as ChevronRight } from "./svg/chevron-right.svg";
+import { ReactComponent as ChevronDoubleRight } from "./svg/chevron-double-right.svg";
 
 function mapStateToProps(state: RootState) {
   return {
@@ -23,6 +28,8 @@ const mapDispatchToProps = {
   setTodosPerPage: setTodosPerPageAction,
   incrementPage: incrementPageAction,
   decrementPage: decrementPageAction,
+  jumpToFirstPage: jumpToFirstPageAction,
+  jumpToLastPage: jumpToLastPageAction,
 };
 
 const connector = connect(mapStateToProps, mapDispatchToProps);
@@ -63,12 +70,20 @@ function Pagination(props: PropsFromRedux) {
       </span>
 
       <span style={{ display: "flex" }}>
+        <ChangePage disabled={currentPage === 0} action={props.jumpToFirstPage}>
+          <ChevronDoubleLeft />
+        </ChangePage>
+
         <ChangePage disabled={currentPage === 0} action={props.decrementPage}>
           <ChevronLeft />
         </ChangePage>
 
         <ChangePage disabled={isLastPage} action={props.incrementPage}>
           <ChevronRight />
+        </ChangePage>
+
+        <ChangePage disabled={isLastPage} action={props.jumpToLastPage}>
+          <ChevronDoubleRight />
         </ChangePage>
       </span>
     </div>
