@@ -18,13 +18,13 @@ const connector = connect(mapStateToProps, mapDispatchToProps);
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
-function PaginationBar(props: PropsFromRedux) {
+function Pagination(props: PropsFromRedux) {
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     props.setTodosPerPage(parseInt(e.target.value));
   };
 
   return (
-    <div>
+    <div className="Pagination">
       <span>Todos per page</span>
       <select value={props.todosPerPage} onChange={handleChange}>
         {perPageRange.map((val) => {
@@ -39,4 +39,4 @@ function PaginationBar(props: PropsFromRedux) {
   );
 }
 
-export default connector(PaginationBar);
+export default connector(Pagination);

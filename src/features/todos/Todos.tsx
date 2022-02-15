@@ -2,7 +2,7 @@ import React from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "../../app/store";
 import Card from "./Card";
-import PaginationBar from "./PaginationBar";
+import Pagination from "./Pagination";
 
 function mapStateToProps(state: RootState) {
   return {
@@ -33,7 +33,7 @@ function Todos(props: PropsFromRedux) {
           2xl:columns-6
         "
       >
-        <PaginationBar />
+        <Pagination />
         {props.todos.map((todo) => {
           return <Card key={todo.id} todo={todo} />;
         })}
