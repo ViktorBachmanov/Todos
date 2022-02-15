@@ -35,8 +35,14 @@ export const todosSlice = createSlice({
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     // Use the PayloadAction type to declare the contents of `action.payload`
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      //state.value += action.payload;
+    setTodosPerPage: (state, action: PayloadAction<number>) => {
+      state.perPage = action.payload;
+      state.currentPage = 0;
+      state.pageList = getPageTodos(
+        state.list,
+        state.perPage,
+        state.currentPage
+      );
     },
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
@@ -58,7 +64,7 @@ export const todosSlice = createSlice({
   },
 });
 
-export const { incrementByAmount } = todosSlice.actions;
+export const { setTodosPerPage } = todosSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
