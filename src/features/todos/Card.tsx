@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { Todo } from "./types";
 import Chip from "../../components/Chip";
 import EditButton from "../../components/EditButton";
+import DeleteButton from "../../components/DeleteButton";
 
 import { useAppDispatch } from "../../app/hooks";
 import { save } from "./todosSlice";
@@ -49,12 +50,15 @@ export default function Card(props: Props) {
         <div>{title}</div>
       )}
 
-      {completed && <Chip />}
-      <EditButton
-        isEditMode={isEditMode}
-        setEditMode={setEditMode}
-        saveTodo={saveTodo}
-      />
+      <div style={{ display: "flex" }}>
+        {completed && <Chip />}
+        <EditButton
+          isEditMode={isEditMode}
+          setEditMode={setEditMode}
+          saveTodo={saveTodo}
+        />
+        <DeleteButton />
+      </div>
     </div>
   );
 }
