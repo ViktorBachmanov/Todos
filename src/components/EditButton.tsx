@@ -24,9 +24,12 @@ export default function EditButton(props: Props) {
 
   if (isEditMode) {
     return (
-      <div style={{ display: "flex" }}>
-        <OkIcon className="IconButton" onClick={handleSave} />
-        <CancelIcon className="IconButton" onClick={handleCancel} />
+      <div style={{ display: "flex" }} className="bg-stone-400 rounded">
+        <OkIcon className="IconButton text-green-600" onClick={handleSave} />
+        <CancelIcon
+          className="IconButton text-red-400"
+          onClick={handleCancel}
+        />
       </div>
     );
   } else {

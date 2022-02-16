@@ -25,11 +25,7 @@ export default function DeleteButton(props: Props) {
 
   return (
     <>
-      <DeleteIcon
-        className="IconButton"
-        style={{ marginLeft: "auto" }}
-        onClick={() => setDialogOpen(true)}
-      />
+      <DeleteIcon className="IconButton" onClick={() => setDialogOpen(true)} />
 
       {isDialogOpen &&
         ReactDOM.createPortal(

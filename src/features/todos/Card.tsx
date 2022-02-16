@@ -54,13 +54,19 @@ export default function Card(props: Props) {
         <div>{title}</div>
       )}
 
-      <div style={{ display: "flex" }}>
-        <Chip toggleCompleted={toggleCompleted} completed={completed} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginTop: "1rem",
+        }}
+      >
         <EditButton
           isEditMode={isEditMode}
           setEditMode={setEditMode}
           saveTodo={saveTodo}
         />
+        <Chip toggleCompleted={toggleCompleted} completed={completed} />
         <DeleteButton todoId={id} />
       </div>
     </div>
