@@ -32,6 +32,10 @@ export default function Card(props: Props) {
     dispatch(save(modifiedTodo));
   };
 
+  const toggleCompleted = () => {
+    dispatch(save({ ...props.todo, completed: !props.todo.completed }));
+  };
+
   let classes = "Card";
   if (completed) {
     classes += " completed";
@@ -51,7 +55,7 @@ export default function Card(props: Props) {
       )}
 
       <div style={{ display: "flex" }}>
-        {completed && <Chip />}
+        <Chip toggleCompleted={toggleCompleted} completed={completed} />
         <EditButton
           isEditMode={isEditMode}
           setEditMode={setEditMode}

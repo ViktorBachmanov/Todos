@@ -56,7 +56,8 @@ code {
     line-height: 1.25rem;
     border-radius: 1rem;
     padding: 0.5rem;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     background: #616974;
   }
 
