@@ -17,6 +17,12 @@ code {
 }
 
 @layer components {
+  .Layout {
+    min-height: 100vh;
+
+    @apply dark:text-slate-300;
+  }
+
   .activeNavLink {
     background: #334155;
   }
@@ -65,10 +71,6 @@ code {
     pointer-events: none;
     @apply text-gray-600;
   }
-}
-
-.Layout {
-  min-height: 100vh;
 }
 
 .NavBar {
