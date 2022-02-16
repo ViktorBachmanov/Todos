@@ -67,7 +67,8 @@ code {
     display: flex;
     align-items: center;
     cursor: pointer;
-    background: #616974;
+
+    @apply bg-stone-300 dark:bg-teal-800 dark:text-slate-300;
   }
 
   .Pagination select {
