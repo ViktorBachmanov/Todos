@@ -1,7 +1,10 @@
 import React, { useState, useRef } from "react";
 import { Todo } from "./types";
 import Chip from "../../components/Chip";
-import { ReactComponent as EditIcon } from "./svg/pencil-alt.svg";
+import EditButton from "../../components/EditButton";
+
+import { useAppDispatch } from "../../app/hooks";
+import { save } from "./todosSlice";
 
 type Props = {
   todo: Todo;
@@ -12,7 +15,21 @@ export default function Card(props: Props) {
 
   const [isEditMode, setEditMode] = useState(false);
 
+  const dispatch = useAppDispatch();
+
   const textArea = useRef(null);
+
+  const saveTodo = () => {
+    let modifiedTitle;
+    if (textArea.current !== null) {
+      const currentTextarea = textArea.current as any;
+      modifiedTitle = currentTextarea.value;
+    } else {
+      modifiedTitle = title;
+    }
+    const modifiedTodo = { ...props.todo, title: modifiedTitle };
+    dispatch(save(modifiedTodo));
+  };
 
   let classes = "Card";
   if (completed) {
@@ -33,7 +50,11 @@ export default function Card(props: Props) {
       )}
 
       {completed && <Chip />}
-      <EditIcon style={{ width: "2rem" }} onClick={() => setEditMode(true)} />
+      <EditButton
+        isEditMode={isEditMode}
+        setEditMode={setEditMode}
+        saveTodo={saveTodo}
+      />
     </div>
   );
 }
