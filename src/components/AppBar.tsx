@@ -1,10 +1,13 @@
 import React from "react";
 import NavBar from "./NavBar";
+import LightMode from "./LightMode";
 
 export default function AppBar() {
   return (
-    <div className="dark:bg-slate-800 dark:text-slate-300">
+    <div className="AppBar">
       <NavBar />
+
+      <LightMode />
     </div>
   );
 }

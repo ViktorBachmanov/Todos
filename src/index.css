@@ -23,6 +23,11 @@ code {
     @apply dark:text-slate-300;
   }
 
+  .AppBar {
+    display: flex;
+    @apply dark:bg-slate-800 dark:text-slate-300;
+  }
+
   .activeNavLink {
     background: #334155;
   }
@@ -85,4 +90,10 @@ code {
 .Pagination {
   display: flex;
   align-items: center;
+}
+
+.LightMode {
+  width: 2rem;
+  margin: 0.5rem 0.5rem 0.5rem auto;
+  cursor: pointer;
 }
