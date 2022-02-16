@@ -26,7 +26,7 @@ function Layout(props: PropsFromRedux) {
     <div className="Layout dark:bg-zinc-900">
       <AppBar />
 
-      <div className="container">
+      <div className="container pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12">
         <Outlet />
       </div>
     </div>

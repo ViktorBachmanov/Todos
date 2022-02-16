@@ -125,7 +125,6 @@ code {
 
 .Description .header {
   text-align: center;
-  margin-top: 1rem;
 }
 
 .IconButton {
@@ -136,5 +135,4 @@ code {
 .AddTodo {
   display: flex;
   width: 100%;
-  margin-top: 1rem;
 }
