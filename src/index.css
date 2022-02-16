@@ -78,11 +78,10 @@ code {
   }
 
   .Button {
-    padding: 1em;
-    border-radius: 1em;
+    border-radius: 0.5em;
     cursor: pointer;
 
-    @apply bg-blue-700 text-slate-200;
+    @apply bg-blue-700 text-slate-200 m-2 p-4;
   }
 
   .Button.disabled {
@@ -99,9 +98,10 @@ code {
 
   .Dialog {
     width: 200px;
-    height: 100px;
+    border-radius: 1rem;
+    padding: 1rem;
 
-    @apply dark:bg-stone-500 dark:text-gray-200;
+    @apply bg-stone-200 dark:bg-stone-500 text-red-600;
   }
 }
 
@@ -154,4 +154,9 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.Dialog-title {
+  text-align: center;
+  margin-bottom: 1rem;
 }

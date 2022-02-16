@@ -12,7 +12,7 @@ type Props = {
 };
 
 export default function Card(props: Props) {
-  const { title, completed } = props.todo;
+  const { title, completed, id } = props.todo;
 
   const [isEditMode, setEditMode] = useState(false);
 
@@ -57,7 +57,7 @@ export default function Card(props: Props) {
           setEditMode={setEditMode}
           saveTodo={saveTodo}
         />
-        <DeleteButton />
+        <DeleteButton todoId={id} />
       </div>
     </div>
   );

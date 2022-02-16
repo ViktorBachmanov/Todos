@@ -4,10 +4,24 @@ import ReactDOM from "react-dom";
 import { ReactComponent as DeleteIcon } from "./svg/trash.svg";
 import Dialog from "./Dialog";
 
-interface Props {}
+import { useAppDispatch } from "../app/hooks";
+import { remove } from "../features/todos/todosSlice";
+
+interface Props {
+  todoId: number;
+}
 
 export default function DeleteButton(props: Props) {
+  const { todoId } = props;
+
   const [isDialogOpen, setDialogOpen] = useState(false);
+
+  const dispatch = useAppDispatch();
+
+  const handleDeleteTodo = () => {
+    dispatch(remove(todoId));
+    setDialogOpen(false);
+  };
 
   return (
     <>
@@ -21,7 +35,8 @@ export default function DeleteButton(props: Props) {
         ReactDOM.createPortal(
           <Dialog
             title="Delete todo?"
-            handleClose={() => setDialogOpen(false)}
+            handleCancel={() => setDialogOpen(false)}
+            handleOk={handleDeleteTodo}
           />,
           document.getElementById("root")!
         )}
