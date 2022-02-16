@@ -56,7 +56,7 @@ code {
 
   .Card textarea {
     width: 100%;
-    @apply dark:bg-slate-800 dark:text-slate-300;
+    @apply dark:bg-slate-800 dark:text-slate-300 p-1;
   }
 
   .Chip {
@@ -97,13 +97,13 @@ code {
   .Button.disabled {
     pointer-events: none;
 
-    @apply bg-gray-600 text-gray-400;
+    @apply bg-gray-400 text-gray-200 dark:bg-gray-600 dark:text-gray-400;
   }
 
   .AddTodo textarea {
     flex: 1 1 auto;
 
-    @apply dark:bg-slate-800 dark:text-gray-200;
+    @apply dark:bg-slate-800 dark:text-gray-200 p-1;
   }
 
   .Dialog {
