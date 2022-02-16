@@ -73,19 +73,19 @@ function Pagination(props: PropsFromRedux) {
 
       <span style={{ display: "flex" }}>
         <ChangePage disabled={currentPage === 0} action={props.jumpToFirstPage}>
-          <ChevronDoubleLeft />
+          <ChevronDoubleLeft title="First page" />
         </ChangePage>
 
         <ChangePage disabled={currentPage === 0} action={props.decrementPage}>
-          <ChevronLeft />
+          <ChevronLeft title="Previous page" />
         </ChangePage>
 
         <ChangePage disabled={isLastPage} action={props.incrementPage}>
-          <ChevronRight />
+          <ChevronRight title="Next page" />
         </ChangePage>
 
         <ChangePage disabled={isLastPage} action={props.jumpToLastPage}>
-          <ChevronDoubleRight />
+          <ChevronDoubleRight title="Last page" />
         </ChangePage>
       </span>
     </div>
