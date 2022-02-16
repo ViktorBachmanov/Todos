@@ -20,13 +20,14 @@ code {
   .Layout {
     min-height: 100vh;
 
-    @apply dark:bg-zinc-900 dark:text-slate-300;
+    @apply bg-slate-300 dark:bg-zinc-900 dark:text-slate-300;
   }
 
   .AppBar {
     display: flex;
+    align-items: center;
 
-    @apply bg-slate-500 dark:bg-slate-800 dark:text-slate-300;
+    @apply bg-slate-500 dark:bg-slate-800 dark:text-slate-300 shadow-xl;
   }
 
   .NavBar {
@@ -46,11 +47,11 @@ code {
     margin: 0 0 1rem 0;
     padding: 1rem;
 
-    @apply bg-slate-700;
+    @apply bg-slate-400 dark:bg-slate-700 shadow-xl;
   }
 
   .Card.completed {
-    @apply bg-emerald-700;
+    @apply bg-emerald-500 dark:bg-emerald-700;
   }
 
   .Card textarea {
@@ -95,7 +96,7 @@ code {
   .Button.disabled {
     pointer-events: none;
 
-    @apply bg-gray-800 text-gray-600;
+    @apply bg-gray-600 text-gray-400;
   }
 
   .AddTodo textarea {
@@ -121,6 +122,7 @@ code {
 .Pagination {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 

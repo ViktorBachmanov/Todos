@@ -17,9 +17,9 @@ export default function AddTodo() {
     setText("");
   };
 
-  let buttonClasses = "Button";
+  let classes = "Button";
   if (!text) {
-    buttonClasses += " disabled";
+    classes += " disabled";
   }
 
   return (
@@ -29,9 +29,9 @@ export default function AddTodo() {
         placeholder="Enter text"
         onChange={changeHandler}
       />
-      <div className={buttonClasses} onClick={addTodoHandler}>
+      <button className={classes} onClick={addTodoHandler}>
         Add
-      </div>
+      </button>
     </div>
   );
 }
