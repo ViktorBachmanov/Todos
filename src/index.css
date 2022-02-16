@@ -97,3 +97,13 @@ code {
   margin: 0.5rem 0.5rem 0.5rem auto;
   cursor: pointer;
 }
+
+.Description p {
+  text-indent: 2rem;
+  margin-top: 1rem;
+}
+
+.Description .header {
+  text-align: center;
+  margin-top: 1rem;
+}
