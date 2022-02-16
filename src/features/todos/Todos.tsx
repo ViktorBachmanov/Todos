@@ -3,6 +3,7 @@ import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "../../app/store";
 import Card from "./Card";
 import Pagination from "./Pagination";
+import AddTodo from "./AddTodo";
 
 function mapStateToProps(state: RootState) {
   return {
@@ -22,7 +23,7 @@ function Todos(props: PropsFromRedux) {
 
   return (
     <div className="dark:text-slate-300">
-      <h2>Todos</h2>
+      <AddTodo />
       <Pagination />
       <div
         className="

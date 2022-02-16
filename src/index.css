@@ -72,9 +72,29 @@ code {
   }
 
   .ChangePage.disabled {
-    cursor: auto;
+    /*cursor: auto;*/
     pointer-events: none;
     @apply text-gray-600;
+  }
+
+  .Button {
+    padding: 1em;
+    border-radius: 1em;
+    cursor: pointer;
+
+    @apply bg-blue-700 text-slate-200;
+  }
+
+  .Button.disabled {
+    pointer-events: none;
+
+    @apply bg-gray-800 text-gray-600;
+  }
+
+  .AddTodo textarea {
+    flex: 1 1 auto;
+
+    @apply dark:bg-slate-800 dark:text-gray-200;
   }
 }
 
@@ -111,4 +131,10 @@ code {
 .IconButton {
   width: 2rem;
   cursor: pointer;
+}
+
+.AddTodo {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
 }
