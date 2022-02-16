@@ -5,4 +5,4 @@ export type Todo = {
   completed: boolean;
 };
 
-export const perPageRange = [8, 10, 12, 16, 20];
+export const perPageRange = [8, 10, 12, 16, 20, 25, 30, 35, 40];

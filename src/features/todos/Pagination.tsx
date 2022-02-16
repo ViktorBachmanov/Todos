@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { perPageRange } from "./types";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "../../app/store";
@@ -53,18 +53,20 @@ function Pagination(props: PropsFromRedux) {
 
   return (
     <div className="Pagination">
-      <span>Todos per page: </span>
-      <select value={todosPerPage} onChange={handleChange}>
-        {perPageRange.map((val) => {
-          return (
-            <option key={val} value={val}>
-              {val}
-            </option>
-          );
-        })}
-      </select>
+      <div className="m-2">
+        <span>Todos per page: </span>
+        <select value={todosPerPage} onChange={handleChange} className="p-2">
+          {perPageRange.map((val) => {
+            return (
+              <option key={val} value={val}>
+                {val}
+              </option>
+            );
+          })}
+        </select>
+      </div>
 
-      <span>
+      <span className="m-2">
         {`${currentTodoNo + 1}-${lastTodoNo} of 
         ${todosListLength}`}
       </span>

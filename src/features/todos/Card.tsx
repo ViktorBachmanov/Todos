@@ -48,7 +48,7 @@ export default function Card(props: Props) {
           defaultValue={title}
           ref={textArea}
           autoFocus={true}
-          rows={3}
+          rows={2}
         />
       ) : (
         <div>{title}</div>

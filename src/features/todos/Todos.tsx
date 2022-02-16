@@ -38,6 +38,7 @@ function Todos(props: PropsFromRedux) {
           return <Card key={todo.id} todo={todo} />;
         })}
       </div>
+      <Pagination />
     </div>
   );
 }

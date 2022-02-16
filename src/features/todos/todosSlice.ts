@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState, AppThunk } from "../../app/store";
 import { Todo, perPageRange } from "./types";
 
 export interface TodosState {
@@ -13,7 +12,7 @@ export interface TodosState {
 const initialState: TodosState = {
   list: [],
   status: "idle",
-  perPage: perPageRange[0],
+  perPage: perPageRange[4],
   currentPage: 0,
   pageList: [],
 };

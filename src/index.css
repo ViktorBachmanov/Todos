@@ -79,10 +79,9 @@ code {
   }
 
   .Button {
-    border-radius: 0.5em;
     cursor: pointer;
 
-    @apply bg-blue-700 text-slate-200 m-2 p-4;
+    @apply bg-blue-700 text-slate-200 m-2 p-2 rounded;
   }
 
   .Button.disabled {
@@ -102,7 +101,7 @@ code {
     border-radius: 1rem;
     padding: 1rem;
 
-    @apply bg-stone-200 dark:bg-stone-500 text-red-600;
+    @apply bg-stone-200 dark:bg-stone-500 text-red-800;
   }
 }
 
@@ -118,6 +117,7 @@ code {
 .Pagination {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .LightMode {
