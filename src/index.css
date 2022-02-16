@@ -113,6 +113,13 @@ code {
 
     @apply bg-stone-200 dark:bg-stone-500 text-red-800;
   }
+
+  .logo {
+    float: left;
+    margin: 1rem;
+
+    @apply w-20 sm:w-28 lg:w-36 xl:w-44 dark:invert;
+  }
 }
 
 .NavBar a {

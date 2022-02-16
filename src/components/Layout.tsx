@@ -17,13 +17,11 @@ function Layout(props: PropsFromRedux) {
   const { fetchTodos } = props;
 
   useEffect(() => {
-    console.log("Layout useEffect()");
-
     fetchTodos();
   }, [fetchTodos]);
 
   return (
-    <div className="Layout dark:bg-zinc-900">
+    <div className="Layout">
       <AppBar />
 
       <div className="container pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12">

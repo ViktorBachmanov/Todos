@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../logoWelbex.png";
 
 export default function Home() {
   const [lang, setLang] = useState("En");
@@ -16,6 +17,9 @@ export default function Home() {
       <div onClick={toggleLang} style={{ cursor: "pointer", float: "right" }}>
         {lang}
       </div>
+
+      <img src={logo} alt="logo" className="logo" />
+
       {lang === "Ru" ? (
         <div>
           <h2 className="header">Описание</h2>
