@@ -7,9 +7,9 @@ export const descRu = {
               пользователя включает также панели навигации и пагинации.`,
     `Приложение написано на языке программирования TypeScript с помощью
               библиотек React, Redux-Toolkit, React-Router и стилизовано
-              средствами TailwindCSS framework. Список элементов отображается в
+              средствами TailwindCSS. Список элементов отображается в
               виде колонок, количество которых зависит от ширины экрана
-              устройства. Также имеется возможность выбора светлой / темной`,
+              устройства. Также имеется возможность выбора светлой / темной темы.`,
   ],
 };
 
@@ -22,7 +22,7 @@ export const descEn = {
             and pagination panels.`,
     `The application is written in TypeScript programming language
             using the React, Redux-Toolkit, React-Router libraries and
-            stylized by means of the TailwindCSS framework. The list of
+            stylized by means of the TailwindCSS. The list of
             elements is presented in the form of columns, the number of which
             depends on the device screen width. Also, it is possible to choose
             the light / dark theme.`,

@@ -14,20 +14,6 @@
 
 @tailwind components;
 @tailwind utilities;
-/*
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}*/
 
 @layer components {
   .Layout {
@@ -84,6 +70,15 @@ code {
     @apply bg-stone-300 dark:bg-teal-800 dark:text-slate-300;
   }
 
+  .Pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @apply py-2;
+  }
+
   .Pagination select {
     @apply dark:bg-slate-800 dark:text-slate-300;
   }
@@ -129,9 +124,9 @@ code {
 
   .logo {
     float: left;
-    margin: 1rem;
+    /*margin: 1rem;*/
 
-    @apply w-20 sm:w-28 lg:w-36 xl:w-44 dark:invert;
+    @apply w-20 m-4 sm:w-28 lg:w-36 xl:w-44 sm:m-5 md:m-6 lg:m-7 xl:m-8 dark:invert;
   }
 
   .LightMode {
@@ -152,13 +147,6 @@ code {
 .NavBar a {
   padding: 1rem;
   cursor: pointer;
-}
-
-.Pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .Description p {
