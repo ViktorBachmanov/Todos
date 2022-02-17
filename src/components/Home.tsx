@@ -14,7 +14,11 @@ export default function Home() {
 
   return (
     <div className="Description">
-      <div onClick={toggleLang} style={{ cursor: "pointer", float: "right" }}>
+      <div
+        onClick={toggleLang}
+        style={{ cursor: "pointer", float: "right" }}
+        className="bg-neutral-300 dark:bg-neutral-600 p-1"
+      >
         {lang}
       </div>
 
@@ -22,7 +26,7 @@ export default function Home() {
 
       {lang === "Ru" ? (
         <div>
-          <h2 className="header">Описание</h2>
+          <h1 className="header">Описание</h1>
 
           <article style={{ marginTop: "2rem" }}>
             <p>
@@ -43,14 +47,14 @@ export default function Home() {
         </div>
       ) : (
         <div>
-          <h2 className="header">Description</h2>
+          <h1 className="header">Description</h1>
 
           <article style={{ marginTop: "2rem" }}>
             <p>
               This application is designed to operate with the user's "Todo"
-              list. The user can add the new elements as well as modify or
-              remove the existing ones. Also, the user's interface includes the
-              navigation and pagination panels.
+              list. The user can add the new elements and modify or remove the
+              existing ones. Also, the user's interface includes the navigation
+              and pagination panels.
             </p>
             <p>
               The application is written in TypeScript programming language

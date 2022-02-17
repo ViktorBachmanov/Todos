@@ -3,8 +3,6 @@ import { ReactComponent as Sun } from "./svg/sun.svg";
 import { ReactComponent as Moon } from "./svg/moon.svg";
 
 export default function LightMode() {
-  //let initialLightMode = "light";
-
   const [lightMode, setLightMode] = useState("light");
 
   useEffect(() => {
@@ -34,9 +32,3 @@ export default function LightMode() {
     </div>
   );
 }
-
-// helper functions
-/*
-function initialIsDark() {
-  return document.documentElement.classList.contains("dark");
-}*/

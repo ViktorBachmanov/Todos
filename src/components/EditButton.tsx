@@ -28,9 +28,12 @@ export default function EditButton(props: Props) {
         style={{ display: "flex" }}
         className="bg-stone-200 dark:bg-stone-400 rounded"
       >
-        <OkIcon className="IconButton text-green-600" onClick={handleSave} />
+        <OkIcon
+          className="IconButton text-green-600 dark:text-green-700"
+          onClick={handleSave}
+        />
         <CancelIcon
-          className="IconButton text-red-400"
+          className="IconButton text-red-400 dark:text-red-600"
           onClick={handleCancel}
         />
       </div>

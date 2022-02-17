@@ -1,4 +1,17 @@
 @tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 /*
@@ -111,7 +124,7 @@ code {
     border-radius: 1rem;
     padding: 1rem;
 
-    @apply bg-stone-200 dark:bg-stone-500 text-red-800;
+    @apply bg-stone-200 dark:bg-stone-500 text-red-800 shadow-xl;
   }
 
   .logo {
@@ -119,6 +132,20 @@ code {
     margin: 1rem;
 
     @apply w-20 sm:w-28 lg:w-36 xl:w-44 dark:invert;
+  }
+
+  .LightMode {
+    margin: 0.5rem 0.75rem 0.5rem auto;
+    cursor: pointer;
+
+    @apply w-6;
+  }
+
+  .IconButton {
+    width: 2rem;
+    cursor: pointer;
+
+    @apply text-slate-700 dark:text-slate-300;
   }
 }
 
@@ -134,12 +161,6 @@ code {
   flex-wrap: wrap;
 }
 
-.LightMode {
-  width: 2rem;
-  margin: 0.5rem 0.5rem 0.5rem auto;
-  cursor: pointer;
-}
-
 .Description p {
   text-indent: 2rem;
   margin-top: 1rem;
@@ -147,11 +168,6 @@ code {
 
 .Description .header {
   text-align: center;
-}
-
-.IconButton {
-  width: 2rem;
-  cursor: pointer;
 }
 
 .AddTodo {
