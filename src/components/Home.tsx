@@ -18,7 +18,7 @@ export default function Home() {
       <div
         onClick={toggleLang}
         style={{ cursor: "pointer", float: "right" }}
-        className="bg-neutral-300 dark:bg-neutral-600 p-1"
+        className="bg-gray-300 dark:bg-neutral-600 p-1"
       >
         {lang}
       </div>
