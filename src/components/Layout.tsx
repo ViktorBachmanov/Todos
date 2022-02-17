@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { connect, ConnectedProps } from "react-redux";
-//import { RootState } from "../app/store";
 import { fetchTodos as fetchTodosAction } from "../features/todos/todosSlice";
 import AppBar from "./AppBar";
 
