@@ -64,7 +64,7 @@ code {
   }
 
   .Card.completed {
-    @apply bg-emerald-500 dark:bg-emerald-700;
+    @apply bg-emerald-600 dark:bg-emerald-700;
   }
 
   .Card textarea {
