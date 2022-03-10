@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../logoWelbex.png";
+import logo from "../logo.svg";
 import Description, { Lang } from "./Description";
 
 export default function Home() {

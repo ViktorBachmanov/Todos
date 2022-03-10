@@ -126,7 +126,7 @@
     float: left;
     /*margin: 1rem;*/
 
-    @apply w-20 m-4 sm:w-28 lg:w-36 xl:w-44 sm:m-5 md:m-6 lg:m-7 xl:m-8 dark:invert;
+    @apply w-20 m-4 sm:w-28 lg:w-36 xl:w-44 sm:m-5 md:m-6 lg:m-7 xl:m-8;
   }
 
   .LightMode {
