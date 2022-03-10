@@ -9,7 +9,7 @@ export default function AppBar() {
 
       <a
         className="GitHubLink"
-        href="https://todos-viktorbachmanov.vercel.app/"
+        href="https://github.com/ViktorBachmanov/Todos"
         target="_blank"
         rel="noreferrer"
       >
