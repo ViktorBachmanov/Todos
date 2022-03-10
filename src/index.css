@@ -146,6 +146,7 @@
   .GitHubLink {
     border-radius: 0.5rem;
     padding: 0.5rem;
+    margin-left: 1rem;
 
     @apply bg-cyan-700 dark:bg-indigo-800 shadow;
   }
